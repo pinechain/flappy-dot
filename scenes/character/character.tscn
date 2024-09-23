@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba24u8gtcpb2l"]
+
+[ext_resource type="Texture2D" uid="uid://bnvgojbj3rcae" path="res://scenes/character/wingodot-down.png" id="1_bv7if"]
+[ext_resource type="Texture2D" uid="uid://cukqpyxknad8y" path="res://scenes/character/wingodot-mid.png" id="2_vlaxn"]
+[ext_resource type="Texture2D" uid="uid://by35yxsphiun0" path="res://scenes/character/wingodot-up.png" id="3_nxv0a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqv4k"]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56a4x"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_bv7if")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_vlaxn")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_nxv0a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="Character" type="RigidBody2D"]
+position = Vector2(483, 284)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qqv4k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_56a4x")
+autoplay = "default"
+frame_progress = 0.501122
