@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://chsj5nntgcaxp"]
+
+[ext_resource type="PackedScene" uid="uid://nyggwliq61c6" path="res://scenes/scenario/scenario.tscn" id="1_p38uw"]
+[ext_resource type="PackedScene" uid="uid://cegweq2s1j0mk" path="res://scenes/ground/ground.tscn" id="2_vseuf"]
+[ext_resource type="PackedScene" uid="uid://ba24u8gtcpb2l" path="res://scenes/character/character.tscn" id="3_x08do"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Scenario" parent="." instance=ExtResource("1_p38uw")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 683.0
+offset_top = 384.0
+offset_right = 683.0
+offset_bottom = 384.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Ground" parent="." instance=ExtResource("2_vseuf")]
+
+[node name="Character" parent="." instance=ExtResource("3_x08do")]
