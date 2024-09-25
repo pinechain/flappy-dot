@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://baq23sxxu6v4w"]
+
+[ext_resource type="Texture2D" uid="uid://def57eqq84m5p" path="res://scenes/moon/moon.png" id="1_xt62d"]
+
+[node name="Moon" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xt62d")
