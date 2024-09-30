@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba24u8gtcpb2l"]
+[gd_scene load_steps=7 format=3 uid="uid://ba24u8gtcpb2l"]
 
 [ext_resource type="Texture2D" uid="uid://bnvgojbj3rcae" path="res://scenes/character/wingodot-down.png" id="1_bv7if"]
+[ext_resource type="Script" path="res://scenes/character/character.gd" id="1_lsy3q"]
 [ext_resource type="Texture2D" uid="uid://cukqpyxknad8y" path="res://scenes/character/wingodot-mid.png" id="2_vlaxn"]
 [ext_resource type="Texture2D" uid="uid://by35yxsphiun0" path="res://scenes/character/wingodot-up.png" id="3_nxv0a"]
 
@@ -26,7 +27,9 @@ animations = [{
 
 [node name="Character" type="RigidBody2D"]
 position = Vector2(483, 284)
+scale = Vector2(1, 0.978596)
 collision_mask = 2
+script = ExtResource("1_lsy3q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_qqv4k")
