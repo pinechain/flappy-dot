@@ -1,8 +1,0 @@
-- Tela inicial
-	- Animação sem input e sem obstáculos
-- Gameplay
-	- Input do usuário
-	- Obstáculos
-		- Gap de tamanho fixo
-		- Altura máxima e mínima
-		- 
