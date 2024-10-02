@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://4fepvof2t8a8"]
+
+[ext_resource type="Texture2D" uid="uid://b4mxjlmd3328f" path="res://scenes/obstacle/ground/ground.png" id="1_376b7"]
+[ext_resource type="Script" path="res://scenes/obstacle/obstacle.gd" id="1_yhjao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lugv8"]
+size = Vector2(1366, 140)
+
+[node name="Ground" type="CharacterBody2D"]
+position = Vector2(683, 698)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_yhjao")
+spawn_x = 2080
+spawn_y_min = 698
+spawn_y_max = 698
+should_move_when_waiting = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lugv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_376b7")

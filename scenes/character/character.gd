@@ -7,6 +7,7 @@ var _vgl := CharacterVGL.new()
 
 
 func _ready():
+	print (name, " ready!")
 	_vgl.on_waiting_requested()
 	_pause()
 

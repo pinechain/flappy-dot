@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://nyggwliq61c6" path="res://scenes/scenario/scenario.tscn" id="1_p38uw"]
 [ext_resource type="PackedScene" uid="uid://baq23sxxu6v4w" path="res://scenes/moon/moon.tscn" id="2_1y85u"]
-[ext_resource type="PackedScene" uid="uid://cegweq2s1j0mk" path="res://scenes/ground/ground.tscn" id="2_vseuf"]
 [ext_resource type="PackedScene" uid="uid://ba24u8gtcpb2l" path="res://scenes/character/character.tscn" id="3_x08do"]
-[ext_resource type="PackedScene" uid="uid://2h1use1lfm0p" path="res://scenes/pipes/pipe.tscn" id="4_pf0r8"]
+[ext_resource type="PackedScene" path="res://scenes/pipes/pipe.tscn" id="4_pf0r8"]
+[ext_resource type="PackedScene" uid="uid://4fepvof2t8a8" path="res://scenes/obstacle/ground/ground.tscn" id="6_dqgde"]
 [ext_resource type="PackedScene" uid="uid://b7npo0gxx0jsg" path="res://scenes/teleport/teleport.tscn" id="6_ml3f1"]
 
 [node name="Gameplay" type="Node2D"]
@@ -24,10 +24,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Moon" parent="." instance=ExtResource("2_1y85u")]
 position = Vector2(1301, 89)
 
-[node name="Character" parent="." instance=ExtResource("3_x08do")]
-
-[node name="Ground" parent="." instance=ExtResource("2_vseuf")]
-
 [node name="Pipes2" parent="." instance=ExtResource("4_pf0r8")]
 position = Vector2(2974, 447)
 
@@ -46,5 +42,18 @@ position = Vector2(1984, 414)
 [node name="Pipes9" parent="." instance=ExtResource("4_pf0r8")]
 position = Vector2(2644, 179)
 
-[node name="Teleport" parent="." instance=ExtResource("6_ml3f1")]
+[node name="PipeTeleport" parent="." instance=ExtResource("6_ml3f1")]
 position = Vector2(-265, 140)
+collision_mask = 2
+
+[node name="GroundTeleport" parent="." instance=ExtResource("6_ml3f1")]
+position = Vector2(-1540, 280)
+collision_mask = 4
+
+[node name="Ground" parent="." instance=ExtResource("6_dqgde")]
+position = Vector2(2088, 698)
+
+[node name="Ground2" parent="." instance=ExtResource("6_dqgde")]
+position = Vector2(619, 698)
+
+[node name="Character" parent="." instance=ExtResource("3_x08do")]

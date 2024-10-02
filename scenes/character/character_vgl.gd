@@ -2,11 +2,7 @@ class_name CharacterVGL
 extends Object
 
 
-var _state : Globals.State
-
-
-func _init():
-	on_waiting_requested()
+var _state := Globals.State.DYING
 
 
 func on_waiting_requested():
