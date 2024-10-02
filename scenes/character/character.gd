@@ -5,15 +5,16 @@ extends RigidBody2D
 @export var force_intensity := -30000
 var _vgl := CharacterVGL.new()
 
+@onready var _is_dead := false
+
 
 func _ready():
-	print (name, " ready!")
 	_vgl.on_waiting_requested()
 	_pause()
 
 
 func _process(_delta):
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and not _is_dead:
 		_vgl.on_playing_requested()
 		_resume()
 		_move()
@@ -38,4 +39,4 @@ func _resume():
 
 
 func _stop():
-	pass
+	_is_dead = true

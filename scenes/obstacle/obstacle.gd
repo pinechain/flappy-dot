@@ -13,7 +13,6 @@ extends CharacterBody2D
 
 
 func _ready():
-	print (name, " ready!")
 	EventBus.on_state_changed.sub(_switch_state)
 
 
