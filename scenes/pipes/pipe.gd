@@ -12,7 +12,7 @@ extends CharacterBody2D
 
 
 func _ready():
-	pass
+	EventBus.on_state_changed.sub(_on_state_changed)
 
 
 func _process(_delta):
@@ -22,6 +22,14 @@ func _process(_delta):
 
 func _physics_process(delta):
 	move_and_collide(velocity * delta)
+
+
+func _on_state_changed(state: Globals.State):
+	match state:
+		Globals.State.WAITING, Globals.State.DYING:
+			stop()
+		Globals.State.PLAYING:
+			move()
 
 
 func move():

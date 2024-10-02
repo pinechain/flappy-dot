@@ -29,22 +29,22 @@ position = Vector2(1301, 89)
 [node name="Ground" parent="." instance=ExtResource("2_vseuf")]
 
 [node name="Pipes2" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(1750, 447)
+position = Vector2(2974, 447)
 
 [node name="Pipes4" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(2080, 456)
+position = Vector2(3304, 456)
 
 [node name="Pipes6" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(2410, 268)
+position = Vector2(3634, 268)
 
 [node name="Pipes3" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(1090, 152)
+position = Vector2(2314, 152)
 
 [node name="Pipes5" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(760, 414)
+position = Vector2(1984, 414)
 
 [node name="Pipes9" parent="." instance=ExtResource("4_pf0r8")]
-position = Vector2(1420, 179)
+position = Vector2(2644, 179)
 
 [node name="Teleport" parent="." instance=ExtResource("6_ml3f1")]
 position = Vector2(-265, 140)
