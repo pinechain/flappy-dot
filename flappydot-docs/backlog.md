@@ -34,7 +34,6 @@
 - ~~Detect when the character collides with the floor or obstacles, and reset the game when a collision occurs.~~
 - Add a basic game-over screen to display the player’s score.
 	- Change to DYING state
-		- Screen flashes white
 		- HUD animation for game over takes place
 		- Character ignores input from player
 	

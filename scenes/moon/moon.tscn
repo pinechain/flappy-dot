@@ -1,7 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://baq23sxxu6v4w"]
+[gd_scene load_steps=4 format=3 uid="uid://baq23sxxu6v4w"]
 
+[ext_resource type="Script" path="res://scenes/moon/moon.gd" id="1_s61tr"]
 [ext_resource type="Texture2D" uid="uid://def57eqq84m5p" path="res://scenes/moon/moon.png" id="1_xt62d"]
 
-[node name="Moon" type="Sprite2D"]
+[sub_resource type="Curve2D" id="Curve2D_giumf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1185, 190, 0, 0, 0, 0, 1117, 169, 0, 0, 0, 0, 1037, 152, 0, 0, 0, 0, 899, 135, 0, 0, 0, 0, 552, 132, 0, 0, 0, 0, 418, 154, 0, 0, 0, 0, 337, 171, 0, 0, 0, 0, 268, 183, 0, 0, 0, 0, 202, 203, 0, 0, 0, 0, 149, 224, 0, 0, 0, 0, 100, 237, 0, 0, 0, 0, 60, 257, 0, 0, 0, 0, 21, 271, 0, 0, 0, 0, -15, 292, 0, 0, 0, 0, -88, 332, 0, 0, 0, 0, -158, 369, 0, 0, 0, 0, -228, 418, 0, 0, 0, 0, -327, 483, 0, 0, 0, 0, -450, 679, 0, 0, 0, 0, -290, 947, 0, 0, 0, 0, 102, 957, 0, 0, 0, 0, 516, 983, 0, 0, 0, 0, 1001, 919, 0, 0, 0, 0, 1303, 900, 0, 0, 0, 0, 1498, 831, 0, 0, 0, 0, 1574, 695, 0, 0, 0, 0, 1517, 548, 0, 0, 0, 0, 1451, 396, 0, 0, 0, 0, 1432, 279, 0, 0, 0, 0, 1396, 256, 0, 0, 0, 0, 1349, 236, 0, 0, 0, 0, 1304, 220, 0, 0, 0, 0, 1254, 204, 0, 0, 0, 0, 1185, 190)
+}
+point_count = 34
+
+[node name="Moon" type="Path2D"]
+curve = SubResource("Curve2D_giumf")
+script = ExtResource("1_s61tr")
+speed = 0.005
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(727, 1850)
+scale = Vector2(17.5817, 17.5817)
+texture = ExtResource("1_xt62d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1185, 190)
+rotation = -2.84206
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_xt62d")

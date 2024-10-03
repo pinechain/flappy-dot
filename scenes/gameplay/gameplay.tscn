@@ -22,7 +22,6 @@ grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Moon" parent="." instance=ExtResource("2_1y85u")]
-position = Vector2(1301, 89)
 
 [node name="Pipe" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(2974, 447)
