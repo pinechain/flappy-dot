@@ -6,7 +6,7 @@ extends Node2D
 
 func _ready():
 	EventBus.on_goal_reached.sub(_increase_score)
-	EventBus.on_state_changed.sub(_reset_score)
+	# EventBus.on_state_changed.sub(_reset_score)
 
 
 func _increase_score():

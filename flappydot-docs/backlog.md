@@ -44,8 +44,8 @@
 
 - Add some sounds that will play each time the player gains a point, and when the player loses.
 
-EVENT LIBRARY IS BROKEN, FIX IT BEFORE EVERYTHING ELSE
-Also, keep working on score/hud
+~~EVENT LIBRARY IS BROKEN, FIX IT BEFORE EVERYTHING ELSE~~
+~~Also, keep working on score/hud~~
 
 --------------------------------------------
 

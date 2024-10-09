@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://chsj5nntgcaxp"]
+[gd_scene load_steps=11 format=3 uid="uid://chsj5nntgcaxp"]
 
 [ext_resource type="PackedScene" uid="uid://c5xugugo337k0" path="res://scenes/arbiter/arbiter.tscn" id="1_1tmyf"]
 [ext_resource type="PackedScene" uid="uid://nyggwliq61c6" path="res://scenes/scenario/scenario.tscn" id="1_p38uw"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4fepvof2t8a8" path="res://scenes/obstacle/ground/ground.tscn" id="6_dqgde"]
 [ext_resource type="PackedScene" uid="uid://b7npo0gxx0jsg" path="res://scenes/teleport/teleport.tscn" id="6_ml3f1"]
 [ext_resource type="PackedScene" uid="uid://bjvl7syy1xe0a" path="res://scenes/goal_detector/goal_detector.tscn" id="7_kojvq"]
+[ext_resource type="PackedScene" uid="uid://bj7wuqpj7act4" path="res://scenes/hud/pizza_hud.tscn" id="10_we8md"]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -82,3 +83,7 @@ position = Vector2(619, 698)
 position = Vector2(483, 384)
 
 [node name="Character" parent="." instance=ExtResource("3_x08do")]
+
+[node name="PizzaHud" parent="." instance=ExtResource("10_we8md")]
+offset_left = 683.0
+offset_right = 683.0
