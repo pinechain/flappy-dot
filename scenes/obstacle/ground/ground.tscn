@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lugv8"]
 size = Vector2(1366, 140)
 
-[node name="Ground" type="CharacterBody2D"]
+[node name="Ground" type="CharacterBody2D" groups=["ground"]]
 position = Vector2(683, 698)
 collision_layer = 4
 collision_mask = 0

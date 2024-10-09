@@ -33,16 +33,19 @@
     
 - ~~Detect when the character collides with the floor or obstacles, and reset the game when a collision occurs.~~
 - Add a basic game-over screen to display the player’s score.
-	- Change to DYING state
-		- HUD animation for game over takes place
-		- Character ignores input from player
+	- ~~Change to DYING state~~
+		- ~~HUD animation for game over takes place~~
+		- ~~Character ignores input from player~~
 	
 - Accumulate one point for each obstacle that the player passes. Display the score.
 	- Use the EventBus + Event architecture
 
-- Add some background art! Try layering the background and scrolling at a different rate to the foreground obstacles. This is called Parallax scrolling.
+- ~~Add some background art! Try layering the background and scrolling at a different rate to the foreground obstacles. This is called Parallax scrolling.~~
 
 - Add some sounds that will play each time the player gains a point, and when the player loses.
+
+EVENT LIBRARY IS BROKEN, FIX IT BEFORE EVERYTHING ELSE
+Also, keep working on score/hud
 
 --------------------------------------------
 

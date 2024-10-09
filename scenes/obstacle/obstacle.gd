@@ -34,13 +34,11 @@ func respawn():
 
 
 func _switch_state(state: Globals.State):
-	print("State changed to ", state)
 	match state:
 		Globals.State.DYING:
 			stop()
 		Globals.State.PLAYING:
 			move()
 		Globals.State.WAITING: 
-			print("Should move when waiting: ", should_move_when_waiting)
 			if should_move_when_waiting:
 				move()

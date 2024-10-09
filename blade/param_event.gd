@@ -1,17 +1,17 @@
 ## Base class for any kind of communication between different systems in the game.
 ## Essentially a less verbose wrapper around signals.
 ## Instantiate this class for each signal needed to communicate between systems.
-class_name Event
+class_name ParamEvent
 extends Object
 
 
 ## Private encapsulated signal that will serve as bridge between systems.
-signal _event()
+signal _event(param)
 
 
-## Triggers this event with.
-func trigger():
-	_event.emit()
+## Triggers this event with a parameter [param param], if one is provided.
+func trigger(param):
+	_event.emit(param)
 
 
 ## Connects this event to the function [param callable]. For all effects, 

@@ -23,4 +23,3 @@ func on_dying_requested():
 func _switch_state(state: Globals.State):
 	_state = state
 	EventBus.on_state_changed.trigger(state)
-	print("Switching to ", state)

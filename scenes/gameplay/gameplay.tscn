@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://chsj5nntgcaxp"]
+[gd_scene load_steps=10 format=3 uid="uid://chsj5nntgcaxp"]
 
+[ext_resource type="PackedScene" uid="uid://c5xugugo337k0" path="res://scenes/arbiter/arbiter.tscn" id="1_1tmyf"]
 [ext_resource type="PackedScene" uid="uid://nyggwliq61c6" path="res://scenes/scenario/scenario.tscn" id="1_p38uw"]
 [ext_resource type="PackedScene" uid="uid://baq23sxxu6v4w" path="res://scenes/moon/moon.tscn" id="2_1y85u"]
 [ext_resource type="PackedScene" uid="uid://c0qyvb4a3gjqe" path="res://scenes/obstacle/pipes/pipe.tscn" id="3_7jb8e"]
 [ext_resource type="PackedScene" uid="uid://ba24u8gtcpb2l" path="res://scenes/character/character.tscn" id="3_x08do"]
+[ext_resource type="PackedScene" uid="uid://dfhsariwtuvx3" path="res://scenes/obstacle/goal/goal.tscn" id="4_nyxfy"]
 [ext_resource type="PackedScene" uid="uid://4fepvof2t8a8" path="res://scenes/obstacle/ground/ground.tscn" id="6_dqgde"]
 [ext_resource type="PackedScene" uid="uid://b7npo0gxx0jsg" path="res://scenes/teleport/teleport.tscn" id="6_ml3f1"]
+[ext_resource type="PackedScene" uid="uid://bjvl7syy1xe0a" path="res://scenes/goal_detector/goal_detector.tscn" id="7_kojvq"]
 
 [node name="Gameplay" type="Node2D"]
+
+[node name="Arbiter" parent="." instance=ExtResource("1_1tmyf")]
 
 [node name="Scenario" parent="." instance=ExtResource("1_p38uw")]
 anchors_preset = 0
@@ -26,20 +31,38 @@ metadata/_edit_use_anchors_ = true
 [node name="Pipe" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(2974, 447)
 
+[node name="Goal" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(3006, 0)
+
 [node name="Pipe2" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(3304, 456)
+
+[node name="Goal2" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(3336, 0)
 
 [node name="Pipe3" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(3634, 268)
 
+[node name="Goal3" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(3666, 0)
+
 [node name="Pipe4" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(2314, 152)
+
+[node name="Goal4" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(2346, 0)
 
 [node name="Pipe5" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(1984, 414)
 
+[node name="Goal5" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(2016, 0)
+
 [node name="Pipe6" parent="." instance=ExtResource("3_7jb8e")]
 position = Vector2(2644, 179)
+
+[node name="Goal6" parent="." instance=ExtResource("4_nyxfy")]
+position = Vector2(2676, 0)
 
 [node name="PipeTeleport" parent="." instance=ExtResource("6_ml3f1")]
 position = Vector2(-265, 140)
@@ -54,5 +77,8 @@ position = Vector2(2088, 698)
 
 [node name="Ground2" parent="." instance=ExtResource("6_dqgde")]
 position = Vector2(619, 698)
+
+[node name="GoalDetector" parent="." instance=ExtResource("7_kojvq")]
+position = Vector2(483, 384)
 
 [node name="Character" parent="." instance=ExtResource("3_x08do")]

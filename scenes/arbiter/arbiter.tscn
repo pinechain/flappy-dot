@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5xugugo337k0"]
+
+[ext_resource type="Script" path="res://scenes/arbiter/arbiter.gd" id="1_4wfv1"]
+
+[node name="Arbiter" type="Node2D"]
+script = ExtResource("1_4wfv1")

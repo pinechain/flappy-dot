@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfhsariwtuvx3"]
+
+[ext_resource type="Script" path="res://scenes/obstacle/obstacle.gd" id="1_pomjt"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hum5t"]
+b = Vector2(0, 768)
+
+[node name="Goal" type="CharacterBody2D" groups=["goal"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_pomjt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_hum5t")
