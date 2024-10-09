@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ba24u8gtcpb2l"]
+[gd_scene load_steps=9 format=3 uid="uid://ba24u8gtcpb2l"]
 
 [ext_resource type="Texture2D" uid="uid://bnvgojbj3rcae" path="res://scenes/character/wingodot-down.png" id="1_bv7if"]
 [ext_resource type="Script" path="res://scenes/character/character.gd" id="1_lsy3q"]
 [ext_resource type="Texture2D" uid="uid://cukqpyxknad8y" path="res://scenes/character/wingodot-mid.png" id="2_vlaxn"]
 [ext_resource type="Texture2D" uid="uid://by35yxsphiun0" path="res://scenes/character/wingodot-up.png" id="3_nxv0a"]
+[ext_resource type="AudioStream" uid="uid://djn4nh4nbenut" path="res://sounds/flight.wav" id="5_8hkgl"]
+[ext_resource type="AudioStream" uid="uid://b6rx6bewxtiir" path="res://sounds/death.wav" id="5_p1r5f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qqv4k"]
 radius = 18.0
@@ -41,5 +43,11 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_56a4x")
 autoplay = "default"
 frame_progress = 0.820699
+
+[node name="Flight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8hkgl")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p1r5f")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5xugugo337k0"]
+[gd_scene load_steps=3 format=3 uid="uid://c5xugugo337k0"]
 
 [ext_resource type="Script" path="res://scenes/arbiter/arbiter.gd" id="1_4wfv1"]
+[ext_resource type="AudioStream" uid="uid://uaebonbfe64y" path="res://sounds/score.wav" id="2_7mbkm"]
 
 [node name="Arbiter" type="Node2D"]
 script = ExtResource("1_4wfv1")
+
+[node name="Score" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7mbkm")

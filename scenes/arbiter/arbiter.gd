@@ -10,8 +10,8 @@ func _ready():
 
 
 func _increase_score():
-	print("ok got it")
 	_change_score(_score + 1)
+	$Score.play()
 
 
 func _reset_score(state: Globals.State):
@@ -22,4 +22,3 @@ func _reset_score(state: Globals.State):
 func _change_score(new_score: int):
 	_score = new_score
 	EventBus.on_score_changed.trigger(_score)
-	print(_score)

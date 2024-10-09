@@ -28,6 +28,7 @@ func _on_body_entered(_body:Node):
 func _move():
 	var force = Vector2(0, force_intensity)
 	apply_central_force(force)
+	$Flight.play()
 
 
 func _pause():
@@ -40,3 +41,4 @@ func _resume():
 
 func _stop():
 	_is_dead = true
+	$Death.play()
